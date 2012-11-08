@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="navtest">
+<head>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-sanitize.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div ng-controller="AppController">
+		<h2>App Chrome</h2>
+		<p>Path: {{$location.path()}}</p>
+		<ul>
+			<li><a href="welcome">Welcome</a></li>
+			<li><a href="settings">Settings</a></li>
+		</ul>
+	</div>
+	<div>Partial: {{$route.current.template}}</div>
+	<div ng-view></div>
+	<button ng:click="$location.path('/welcome')">welcome</button>
+	<small>Footer</small>
+</body>
+</html>
